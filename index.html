@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <link rel="stylesheet" href="photon/dist/css/photon.min.css">
+    <style>
+      #header-create {
+         display: none;
+      }
+      #span-error-create {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <div class="toolbar-actions">
+          <h1 class="title pull-left">
+            <span class="icon icon-sweden icon-text"></span>
+            NSource
+          </h1>
+
+          <div class="btn-group pull-right">
+            <button id="minimizar" class="btn btn-default">
+              <span class="icon icon-minus"></span>
+            </button>
+            <button id="maximinizar" class="btn btn-default">
+              <span id="maxAndMin" class="icon icon-resize-full"></span>
+            </button>
+            <button id="fechar" class="btn btn-default">
+              <span class="icon icon-cancel-circled"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-folder icon-text"></span>
+              Adicionar
+            </button>
+            <button id="create-repository" class="btn btn-default">
+              <span class="icon icon-plus-circled icon-text"></span>
+              Criar
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-download icon-text"></span>
+              Clonar
+            </button>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-flow-branch icon-text"></span>
+              Branche
+            </button>
+            <button class="btn btn-default btn-dropdown">
+              <span class="icon icon-flow-tree icon-text"></span>
+              Master
+            </button>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-list-add icon-text"></span>
+              Modificões
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-list icon-text"></span>
+              Histórico
+            </button>
+          </div>
+
+          <button class="btn btn-default">
+            <span class="icon icon-upload-cloud icon-text"></span>
+            Publicar
+          </button>
+
+          <button class="btn btn-default pull-right">
+            <span class="icon icon-cog icon-text"></span>
+            Configuração
+          </button>
+        </div>
+
+      </header>
+
+      <header id="header-create" class="toolbar toolbar-header">
+        <div class="toolbar-actions">
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <span>Nome </span>
+            <input id="input-name-create" type="text" placeholder="Nome">
+            <span>Path</span>
+            <input id="input-path-create" type="text" placeholder="Path" disabled="true">
+          </div>
+          <div class="btn-group">
+            <button  id="selected-directory" class="btn btn-default">
+              <span class="icon icon-window icon-text"></span>
+              Browser
+            </button>
+            <button id="button-create-repository" class="btn btn-default">
+              <span class="icon icon-check icon-text"></span>
+              Criar repositório
+            </button>
+          </div>
+          <span id="span-error-create"></span>
+      </header>
+
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <div class="list-group-header">
+              <input class="form-control" type="text" placeholder="Filtrar repositórios">
+            </div>
+
+            <nav class="nav-group">
+              <h5 class="nav-group-title">
+                <span class="icon icon-github icon-text"></span>
+                <strong> GitHub</strong>
+              </h5>
+
+              <span class="nav-group-item">
+                <span class="icon icon-lock"></span>
+                connors
+              </span>
+
+              <span class="nav-group-item">
+                <span class="icon icon-lock"></span>
+                connors
+              </span>
+
+              <span class="nav-group-item">
+                <span class="icon icon-lock"></span>
+                connors
+              </span>
+            </nav>
+
+            <nav class="nav-group">
+              <h5 class="nav-group-title">
+                <span class="icon icon-bucket icon-text"></span>
+                <strong> BitBucket</strong>
+              </h5>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-lock"></span>
+                Red
+              </span>
+            </nav>
+
+            <nav id="sidebar-others" class="nav-group">
+              <h5 class="nav-group-title">
+                <span class="icon icon-flickr icon-text"></span>
+                <strong> Outros</strong>
+              </h5>
+            </nav>
+          </div>
+
+          <div class="pane">
+            <ul class="list-group">
+              <li class="list-group-item active">
+                <img class="img-circle media-object pull-left" src="/assets/img/avatar.jpg" width="32" height="32">
+                <div class="media-body">
+                  <strong>Add .gitignore</strong>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <img class="img-circle media-object pull-left" src="/assets/img/avatar2.png" width="32" height="32">
+                <div class="media-body">
+                  <strong>List item title</strong>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pane">
+            <table class="table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Kind</th>
+                  <th>Date Modified</th>
+                  <th>Author</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bars.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr>
+                  <td>base.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr>
+                  <td>button-groups.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./src/app.js')
+  </script>
+</html>
