@@ -4,7 +4,7 @@
   "description": "Gerenciador gráfico do git",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ."
   },
   "repository": "https://github.com/jacksongarcia/nsource",
   "keywords": [
@@ -20,8 +20,6 @@
     "url": "https://github.com/jacksongarcia"
   },
   "license": "ISC",
-  "devDependencies": {
-  },
   "dependencies": {
     "electron": "^1.4.1"
   }
